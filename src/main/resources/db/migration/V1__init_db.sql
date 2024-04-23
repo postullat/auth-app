@@ -3,7 +3,7 @@ CREATE TABLE users
     id             BIGSERIAL,
     password       VARCHAR(80) NOT NULL,
     email          VARCHAR(50) UNIQUE,
-    email_verified BOOLEAN,
+    is_email_verified BOOLEAN,
     PRIMARY KEY (id)
 );
 
