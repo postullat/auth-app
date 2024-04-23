@@ -1,0 +1,47 @@
+# Database Configuration
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/example_db
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# Email Configuration
+
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:springanastasiia123@gmail.com}
+    password: ${MAIL_PASSWORD:ufjhrhgtjjzhzzdn}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+# JWT Secret Phrases
+jwt:
+  secret: rtynRfS7mB3sL9tY6iG2hU1x7g45adA5vCz09kwK3yJ6uM5
+  refresh: vUvyfcTRCTJKK^%CJKLIUGFXSkljhbucx3duu4567n
+
+  # Token Lifetime
+  lifetime: 60m  # 60 minutes
+  refreshLifetime: 43200m # 30 days (43200 minutes)
+
+# Email Sender Configuration
+email:
+  sender: admin@hostinger.com
+  subject: Email Confirmation
+  confirmation:
+    url: http://localhost:8080/api/auth/email-confirm/
+  reset-password:
+    url: http://localhost:8080/api/auth/change-password/
+
+# Solana private key (Not recommended for production)
+solana:
+  sender:
+    secret: 4GSoMeubvjCUVoJMqgM2VhXdg6zLngs26g7dtNzHGVrgk3URQgtf6s7xhtM2C2ULvCC1yqwQrmXrt4URija1Mce6
