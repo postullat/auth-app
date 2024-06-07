@@ -64,5 +64,3 @@ Access the Application:
    ```
 
 
-
-Developed by Volodymyr
